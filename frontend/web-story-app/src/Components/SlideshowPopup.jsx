@@ -11,8 +11,6 @@ const SlideshowPopup = ({ slides = [], onClose, storyId, isLoggedIn }) => {
   const token = localStorage.getItem("token"); // Retrieve the token from localStorage
   const [shareLink, setShareLink] = useState("");
   const [shareMessageVisible, setShareMessageVisible] = useState(false); // State for share message visibility
-  // const [likedSlides, setLikedSlides] = useState([]);  // Track which slides are liked by the user
-  // const [likeCounts, setLikeCounts] = useState([]);    // Track the number of likes for each slide
   const [likedSlides, setLikedSlides] = useState(
     Array(slides.length).fill(false)
   ); // Track which slides the user has liked
@@ -23,7 +21,7 @@ const SlideshowPopup = ({ slides = [], onClose, storyId, isLoggedIn }) => {
     const fetchLikeStatus = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/stories/${storyId}/likes`,
+          `https://web-story-g7m0.onrender.com/api/stories/${storyId}/likes`,
           {
             headers: { Authorization: `Bearer ${token}` },
             params: { userId }, // Pass userId as query parameter
@@ -80,7 +78,7 @@ const SlideshowPopup = ({ slides = [], onClose, storyId, isLoggedIn }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/stories/like`,
+        `https://web-story-g7m0.onrender.com/api/stories/like`,
         {
           userId,
           storyId,
@@ -132,11 +130,6 @@ const SlideshowPopup = ({ slides = [], onClose, storyId, isLoggedIn }) => {
         console.error("Failed to copy the link: ", error);
       });
   };
-
-  // if (!token) {
-  //     console.error('User is not logged in'); // Handle user not being logged in
-  //     return null; // You can also show a message or redirect to login
-  // }
 
   if (!userId) {
     console.error("User is not logged in"); // Handle user not being logged in
@@ -228,7 +221,7 @@ const SlideshowPopup = ({ slides = [], onClose, storyId, isLoggedIn }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/bookmarks/bookmark",
+        "https://web-story-g7m0.onrender.com/bookmarks/bookmark",
         {
           userId: localStorage.getItem("userId"), // Include userId from localStorage
           storyId: storyId, // Ensure storyId is included
