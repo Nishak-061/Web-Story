@@ -1,0 +1,79 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 50px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+  }
+
+  .username-password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .password-container {
+    position: relative;
+    display: flex;
+    gap: 40px;
+  }
+
+  .username-container{
+    display: flex;
+    gap: 35px;
+  }
+
+  .eye-icon {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .login-font {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+.username-box {
+  width: 245px;
+  height: 35px;
+}
+
+.password-box {
+  width: 245px;
+  height: 35px;
+}
+
+.submit {
+  width: 129px;
+  height: 45px;
+  border: none;
+  border-radius: 20px;
+  background-color: #73ABFF;
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: 150px;
+  margin-top: 40px;
+}

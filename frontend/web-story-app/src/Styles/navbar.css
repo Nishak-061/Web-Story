@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.navbar-container {
+    height: 73px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+    float: inline-end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.navbar-btn-register {
+    background-color: #FF7373;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    font-family: "DM Sans", sans-serif;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar-btn-signin {
+    background-color: #73ABFF;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 45px;
+    font-family: "DM Sans", sans-serif;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hamburger-menu-dropdown {
+    position: absolute;
+    top: 70px; /* Adjust according to navbar height */
+    right: 20px; /* Align to the right side of the screen */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .username-para {
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .hamburger-menu-dropdown p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+
+  
+
+  .navbar-btn-bookmarks {
+    width: 136px;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF7373;
+    font-weight: 700;
+    color: white;
+  }
+
+  .bookmark-font {
+    color: white;
+  }
+
+  .navbar-btn-addstory {
+    width: 136px;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF7373;
+    font-weight: 700;
+    color: white;
+  }
+
+  .navbar-btn-hamburger {
+    border: none;
+    background-color: white;
+  }
+
+  .logout-btn {
+    width: 136px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: #FF7373;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+ 
