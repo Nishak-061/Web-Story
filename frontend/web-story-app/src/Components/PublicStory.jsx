@@ -13,7 +13,7 @@ const PublicStory = () => {
     useEffect(() => {
         const fetchStory = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/stories/public/${storyId}`);
+                const response = await axios.get(`https://web-story-g7m0.onrender.com/stories/public/${storyId}`);
                 console.log(response.data);  // Check what data is being returned
                 setStory(response.data);
             } catch (error) {
@@ -97,54 +97,3 @@ const PublicStory = () => {
 
 export default PublicStory;
 
-
-
-
-
-
-
-
-
-// import React, { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
-// import axios from 'axios';
-
-// const PublicStory = () => {
-//     const { storyId } = useParams();  // Get storyId from URL params
-//     const [story, setStory] = useState(null);
-
-//     useEffect(() => {
-//         const fetchStory = async () => {
-//             try {
-//                 const response = await axios.get(`http://localhost:8080/stories/public/${storyId}`);
-//                 setStory(response.data);
-//             } catch (error) {
-//                 console.error('Error fetching story:', error);
-//             }
-//         };
-//         fetchStory();
-//     }, [storyId]);
-
-//     if (!story) {
-//         return <div>Loading...</div>;
-//     }
-
-//     return (
-//         <div>
-//             <h1>{story.title}</h1>
-//             {story.slides.map((slide, index) => (
-//                 <div key={index}>
-//                     {slide.mediaUrl.endsWith('.mp4') ? (
-//                         <video src={slide.mediaUrl} controls />
-//                     ) : (
-//                         <img src={slide.mediaUrl} alt={slide.title} />
-//                     )}
-//                     <h2>{slide.title}</h2>
-//                     <p>{slide.description}</p>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default PublicStory;
