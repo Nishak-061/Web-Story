@@ -129,7 +129,7 @@ const AddStory = ({ onClose, existingStory, fetchStories }) => {
           slides: updatedSlides,
         };
   
-        const response = await axios.put(`http://localhost:8080/stories/${existingStory._id.trim()}`, updatedStory);
+        const response = await axios.put(`https://web-story-g7m0.onrender.com/stories/${existingStory._id.trim()}`, updatedStory);
         console.log('Update response:', response.data); // Log the response from the server
   
         if (response.status === 200 || response.status === 204) {
