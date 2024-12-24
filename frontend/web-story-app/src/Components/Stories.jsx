@@ -12,7 +12,7 @@ const Stories = ({ loggedInUserId }) => { // Accept loggedInUserId as a prop
 
     const fetchStories = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/stories');
+            const response = await axios.get('https://web-story-g7m0.onrender.com/stories');
             if (response.status === 200) {
                 setStories(response.data);
             }
