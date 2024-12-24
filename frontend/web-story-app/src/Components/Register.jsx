@@ -18,7 +18,7 @@ const Register = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/auth/register", {
+      const response = await axios.post("https://web-story-g7m0.onrender.com/auth/register", {
         username,
         password,
       });
