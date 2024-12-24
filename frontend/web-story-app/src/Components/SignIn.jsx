@@ -20,7 +20,7 @@ const handleSubmit = async (e) => {
 
     try {
       // Send login request to backend
-      const response = await axios.post('http://localhost:8080/auth/login', {
+      const response = await axios.post('https://web-story-g7m0.onrender.com/auth/login', {
         username,
         password,
       });
